@@ -1,0 +1,7 @@
+api:
+  replicaCount: 1
+
+  image:
+    repository: u1aryz/api
+    tag: v1.0
+    pullPolicy: IfNotPresent
