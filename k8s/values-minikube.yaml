@@ -1,6 +1,5 @@
 frontend:
   replicaCount: 1
-
   image:
     repository: u1aryz/frontend
     tag: v1.0
@@ -8,8 +7,19 @@ frontend:
 
 api:
   replicaCount: 1
-
   image:
     repository: u1aryz/api
     tag: v1.0
     pullPolicy: IfNotPresent
+
+redis:
+  master:
+    persistence:
+      size: 1Gi
+  replica:
+    replicaCount: 1
+    persistence:
+      size: 1Gi
+  auth:
+    existingSecret: app-secret
+    existingSecretPasswordKey: redis-password

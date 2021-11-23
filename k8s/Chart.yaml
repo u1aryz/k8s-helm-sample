@@ -1,2 +1,6 @@
 name: k8s-helm-sample
 version: 0.0.1
+dependencies:
+  - name: redis
+    version: "15.6.0"
+    repository: "https://charts.bitnami.com/bitnami"
