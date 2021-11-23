@@ -1,3 +1,11 @@
+frontend:
+  replicaCount: 1
+
+  image:
+    repository: u1aryz/frontend
+    tag: v1.0
+    pullPolicy: IfNotPresent
+
 api:
   replicaCount: 1
 
