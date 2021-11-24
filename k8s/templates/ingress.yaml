@@ -7,6 +7,9 @@ metadata:
     {{- if .Values.ingress.corsAllowOrigin }}
     nginx.ingress.kubernetes.io/cors-allow-origin: "{{ .Values.ingress.corsAllowOrigin }}"
     {{- end }}
+    {{- if .Values.ingress.isOkteto }}
+    dev.okteto.com/generate-host: "{{ .Values.ingress.isOkteto }}"
+    {{- end }}
 spec:
   rules:
     - http:

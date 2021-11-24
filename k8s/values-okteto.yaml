@@ -1,0 +1,29 @@
+ingress:
+  enableCors: "false"
+  isOkteto: "true"
+
+frontend:
+  replicaCount: 1
+  image:
+    repository: registry.cloud.okteto.net/u1aryz/frontend
+    tag: latest
+    pullPolicy: Always
+
+api:
+  replicaCount: 2
+  image:
+    repository: registry.cloud.okteto.net/u1aryz/api
+    tag: latest
+    pullPolicy: Always
+
+redis:
+  master:
+    persistence:
+      size: 1Gi
+  replica:
+    replicaCount: 1
+    persistence:
+      size: 1Gi
+  auth:
+    existingSecret: app-secret
+    existingSecretPasswordKey: redis-password
