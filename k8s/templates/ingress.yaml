@@ -3,8 +3,10 @@ kind: Ingress
 metadata:
   name: ingress
   annotations:
-    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/enable-cors: "{{ .Values.ingress.enableCors }}"
+    {{- if .Values.ingress.corsAllowOrigin }}
     nginx.ingress.kubernetes.io/cors-allow-origin: "{{ .Values.ingress.corsAllowOrigin }}"
+    {{- end }}
 spec:
   rules:
     - http:

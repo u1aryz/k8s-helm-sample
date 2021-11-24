@@ -1,5 +1,6 @@
 ingress:
   # For dev
+  enableCors: "true"
   corsAllowOrigin: "*"
 
 frontend:
