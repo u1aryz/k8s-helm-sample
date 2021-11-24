@@ -1,3 +1,7 @@
+ingress:
+  # For dev
+  corsAllowOrigin: "*"
+
 frontend:
   replicaCount: 1
   image:
