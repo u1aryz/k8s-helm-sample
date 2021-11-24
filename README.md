@@ -6,6 +6,12 @@ Simple app running on k8s.
 * kubectl
 * helm
 
+## Tested versions
+* Docker 20.10.10
+* kubectl 1.22.3
+* helm 3.7.1
+* minikube v1.24.0
+
 ## Setup
 - Start your cluster
 
